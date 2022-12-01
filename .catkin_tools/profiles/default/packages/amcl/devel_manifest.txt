@@ -1,0 +1,16 @@
+navigation/amcl
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/cmake.lock /home/mbz/Documents/PCQD_LIVE/devel/./cmake.lock
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/libamcl_sensors.so /home/mbz/Documents/PCQD_LIVE/devel/lib/libamcl_sensors.so
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/libamcl_pf.so /home/mbz/Documents/PCQD_LIVE/devel/lib/libamcl_pf.so
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/libamcl_map.so /home/mbz/Documents/PCQD_LIVE/devel/lib/libamcl_map.so
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/pkgconfig/amcl.pc /home/mbz/Documents/PCQD_LIVE/devel/lib/pkgconfig/amcl.pc
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/python3/dist-packages/amcl/__init__.py /home/mbz/Documents/PCQD_LIVE/devel/lib/python3/dist-packages/amcl/__init__.py
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/python3/dist-packages/amcl/cfg/__init__.py /home/mbz/Documents/PCQD_LIVE/devel/lib/python3/dist-packages/amcl/cfg/__init__.py
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/python3/dist-packages/amcl/cfg/AMCLConfig.py /home/mbz/Documents/PCQD_LIVE/devel/lib/python3/dist-packages/amcl/cfg/AMCLConfig.py
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/lib/amcl/amcl /home/mbz/Documents/PCQD_LIVE/devel/lib/amcl/amcl
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/share/amcl/cmake/amclConfig-version.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/amcl/cmake/amclConfig-version.cmake
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/share/amcl/cmake/amclConfig.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/amcl/cmake/amclConfig.cmake
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/share/amcl/docs/AMCLConfig.wikidoc /home/mbz/Documents/PCQD_LIVE/devel/share/amcl/docs/AMCLConfig.wikidoc
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/share/amcl/docs/AMCLConfig.dox /home/mbz/Documents/PCQD_LIVE/devel/share/amcl/docs/AMCLConfig.dox
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/share/amcl/docs/AMCLConfig-usage.dox /home/mbz/Documents/PCQD_LIVE/devel/share/amcl/docs/AMCLConfig-usage.dox
+/home/mbz/Documents/PCQD_LIVE/devel/.private/amcl/include/amcl/AMCLConfig.h /home/mbz/Documents/PCQD_LIVE/devel/include/amcl/AMCLConfig.h

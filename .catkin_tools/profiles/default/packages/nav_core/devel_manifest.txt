@@ -1,0 +1,5 @@
+navigation/nav_core
+/home/mbz/Documents/PCQD_LIVE/devel/.private/nav_core/cmake.lock /home/mbz/Documents/PCQD_LIVE/devel/./cmake.lock
+/home/mbz/Documents/PCQD_LIVE/devel/.private/nav_core/lib/pkgconfig/nav_core.pc /home/mbz/Documents/PCQD_LIVE/devel/lib/pkgconfig/nav_core.pc
+/home/mbz/Documents/PCQD_LIVE/devel/.private/nav_core/share/nav_core/cmake/nav_coreConfig.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/nav_core/cmake/nav_coreConfig.cmake
+/home/mbz/Documents/PCQD_LIVE/devel/.private/nav_core/share/nav_core/cmake/nav_coreConfig-version.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/nav_core/cmake/nav_coreConfig-version.cmake

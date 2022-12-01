@@ -1,0 +1,6 @@
+navigation/move_slow_and_clear
+/home/mbz/Documents/PCQD_LIVE/devel/.private/move_slow_and_clear/cmake.lock /home/mbz/Documents/PCQD_LIVE/devel/./cmake.lock
+/home/mbz/Documents/PCQD_LIVE/devel/.private/move_slow_and_clear/lib/libmove_slow_and_clear.so /home/mbz/Documents/PCQD_LIVE/devel/lib/libmove_slow_and_clear.so
+/home/mbz/Documents/PCQD_LIVE/devel/.private/move_slow_and_clear/lib/pkgconfig/move_slow_and_clear.pc /home/mbz/Documents/PCQD_LIVE/devel/lib/pkgconfig/move_slow_and_clear.pc
+/home/mbz/Documents/PCQD_LIVE/devel/.private/move_slow_and_clear/share/move_slow_and_clear/cmake/move_slow_and_clearConfig-version.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/move_slow_and_clear/cmake/move_slow_and_clearConfig-version.cmake
+/home/mbz/Documents/PCQD_LIVE/devel/.private/move_slow_and_clear/share/move_slow_and_clear/cmake/move_slow_and_clearConfig.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/move_slow_and_clear/cmake/move_slow_and_clearConfig.cmake

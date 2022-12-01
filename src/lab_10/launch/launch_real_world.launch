@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- to get position from gazebo -->
+  <!-- <include file="$(find get_pointcloud)/launch/get_pose_from_gazebo.launch"/> -->
+
+  <include file="$(find lab_10)/launch/get_position_drone_from_optitrack.launch"/>
+  
+  <include file="$(find lab_10)/launch/get_position_obs_from_optitrack.launch"/>
+
+  <node name="pcl2_obs_pub" pkg="lab_10" type="point_cloud_circular.py" output="screen"/>
+
+  <!--
+  # TODO
+  # One line
+  # include launch file for creating point cloud from obstacle center
+  # one line
+  # include launch file for converting point cloud to laser scan odomdata
+  # static transform between world to odom of drone -->
+  <include file="$(find lab_10)/launch/point_cloud_to_laser.launch"/>
+  <node pkg="tf" type="static_transform_publisher" name="world_to_bebop_odom" args="0 0 0 0 0 0 world odom 100" />
+
+  <!-- call map less navigation -->
+  <include file="$(find bebop_navigation)/launch/map_less_navigation.launch"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lab_10)/config/cool_world.rviz"/>
+  <node pkg="tf" type="static_transform_publisher" name="bebop_to_camera_optical" args="0.1 0 0 0 0 0 base_footprint camera_optical 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="world_to_camera_optical" args="0.1 0 0 0 0 0 world camera_optical 100" /> -->
+</launch>

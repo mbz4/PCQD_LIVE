@@ -1,0 +1,6 @@
+navigation/rotate_recovery
+/home/mbz/Documents/PCQD_LIVE/devel/.private/rotate_recovery/cmake.lock /home/mbz/Documents/PCQD_LIVE/devel/./cmake.lock
+/home/mbz/Documents/PCQD_LIVE/devel/.private/rotate_recovery/lib/librotate_recovery.so /home/mbz/Documents/PCQD_LIVE/devel/lib/librotate_recovery.so
+/home/mbz/Documents/PCQD_LIVE/devel/.private/rotate_recovery/lib/pkgconfig/rotate_recovery.pc /home/mbz/Documents/PCQD_LIVE/devel/lib/pkgconfig/rotate_recovery.pc
+/home/mbz/Documents/PCQD_LIVE/devel/.private/rotate_recovery/share/rotate_recovery/cmake/rotate_recoveryConfig.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/rotate_recovery/cmake/rotate_recoveryConfig.cmake
+/home/mbz/Documents/PCQD_LIVE/devel/.private/rotate_recovery/share/rotate_recovery/cmake/rotate_recoveryConfig-version.cmake /home/mbz/Documents/PCQD_LIVE/devel/share/rotate_recovery/cmake/rotate_recoveryConfig-version.cmake

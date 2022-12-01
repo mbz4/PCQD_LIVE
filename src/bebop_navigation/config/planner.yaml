@@ -1,0 +1,58 @@
+controller_frequency: 5.0
+recovery_behaviour_enabled: true
+
+NavfnROS:
+  allow_unknown: true # Specifies whether or not to allow navfn to create plans that traverse unknown space.
+  default_tolerance: 0.1 # A tolerance on the goal point for the planner.
+
+
+DWAPlannerROS:
+  # Robot configuration parameters
+  #TODO for more info  check the link given at instruction pdf 
+  # src: http://wiki.ros.org/dwa_local_planner#Parameters
+  #acc_lim  =[-1,1]m/s^2  rotational acc lim [-68.75 ,68.75 degree/s^2]
+  acc_lim_x: 1 #TODO
+  acc_lim_y: 1 #TODO
+  acc_lim_theta: 1.2 #TODO
+  #speed limit in both direction  =[-50,50]cm/s 
+  max_vel_x: 0.25 #TODO
+  min_vel_x: -0.25 #TODO
+  max_vel_y: 0.0 #TODO
+  min_vel_y: 0.0 #TODO
+  
+  #rotational speed limit  =[-57,57] degree/s
+  max_vel_trans: 0.25 # og max_trans_vel deprecated ==> max_vel_trans
+  min_vel_trans: 0.0 # og min_trans_vel deprecated ==> min_vel_trans
+  max_vel_theta: 0.25 #TODO # og max_rot_vel deprecated ==> max_vel_theta
+  min_vel_theta: 0.0 #TODO # og min_rot_vel deprecated ==> min_vel_theta
+#[ WARN] [1667925097.518321728, 1034.934000000]: Parameter max_trans_vel is deprecated (and will not load properly). Use max_vel_trans instead.
+#[ WARN] [1667925097.519232143, 1034.934000000]: Parameter min_trans_vel is deprecated (and will not load properly). Use min_vel_trans instead.
+#[ WARN] [1667925097.520046630, 1034.935000000]: Parameter max_rot_vel is deprecated (and will not load properly). Use max_vel_theta instead.
+#[ WARN] [1667925097.520638376, 1034.936000000]: Parameter min_rot_vel is deprecated (and will not load properly). Use min_vel_theta instead.
+  # Goal Tolerance Parameters
+  #TODO add two parameters , 1) xy goal tolerance value: 20cm and 2) yaw/rotational tolerance of 0.1 radian 
+
+  yaw_goal_tolerance: 0.1 # [rad]
+  xy_goal_tolerance: 0.2 # [m]
+  latch_xy_goal_tolerance: false
+
+  # # Forward Simulation Parameters
+  # sim_time: 2.0
+  # sim_granularity: 0.02
+  # vx_samples: 6
+  # vy_samples: 0
+  # vtheta_samples: 20
+  # penalize_negative_x: true
+
+  # # Trajectory scoring parameters
+  # path_distance_bias: 32.0 # The weighting for how much the controller should stay close to the path it was given
+  # goal_distance_bias: 24.0 # The weighting for how much the controller should attempt to reach its local goal, also controls speed
+  # occdist_scale: 0.01 # The weighting for how much the controller should attempt to avoid obstacles
+  # forward_point_distance: 0.325 # The distance from the center point of the robot to place an additional scoring point, in meters
+  # stop_time_buffer: 0.2  # The amount of time that the robot must stThe absolute value of the veolicty at which to start scaling the robot's footprint, in m/sop before a collision in order for a trajectory to be considered valid in seconds
+  # scaling_speed: 0.25 # The absolute value of the veolicty at which to start scaling the robot's footprint, in m/s
+  # max_scaling_factor: 0.2 # The maximum factor to scale the robot's footprint by
+
+  # # Oscillation Prevention Parameters
+  # oscillation_reset_dist: 0.25 #How far the robot must travel in meters before oscillation flags are reset (double, default: 0.05)
+

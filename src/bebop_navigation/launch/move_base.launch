@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- TODO Create a argument by the name of base_global_planner and its default value as navfn/NavfnROS --> <!-- global planner-->
+  <arg name="base_global_planner" default="navfn/NavfnROS"/>
+  <!-- TODO Create a argument by the name of base_local_planner and its default value as dwa_local_planner/DWAPlannerROS --> <!-- local planner-->
+  <arg name="base_local_planner" default="dwa_local_planner/DWAPlannerROS"/>   
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <remap from="cmd_vel" to="/bebop/velocity"/>
+    <remap from="odom" to="/bebop_optitrack/odom"/>
+    <!-- http://wiki.ros.org/roslaunch/XML/remap
+    Remapping allows you to "trick" a ROS node so that when it thinks it is subscribing to or publishing to /some_topic it is actually subscribing to or publishing to /some_other_topic, for instance.
+
+    we have to remap the velocity commands to bebop velocity such that the driving package understands how to instantiate movement commands
+    remapping odometry to optitrack odometry enables the use of ground truth from optitrack motion capture
+    
+     -->
+    <param name="base_global_planner" value="$(arg base_global_planner)"/>
+    <param name="base_local_planner" value="$(arg base_local_planner)"/>  
+
+    <!-- TODO load the planner.yaml file  located in this package-->
+    <rosparam file="$(find bebop_navigation)/config/planner.yaml" command="load"/>
+    
+    <!-- TODO Question  what does the command 'load' do?
+    load <yaml-file> [namespace]
+    Load parameters from a YAML file into the specified [namespace] (defaults to /)
+    src: http://wiki.ros.org/rosparam#rosparam_load
+
+    it enables our ros instance to access the constants we provide inside the planner YAML file
+    this is achieved by uploading all the YAML formatted variable to the parameter server-->
+
+    <!-- observation sources located in costmap_common.yaml -->
+    <!-- following two lines load the parameters in costmap_common.yaml for local and global costmap -->
+    <rosparam file="$(find bebop_navigation)/config/costmap_common.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find bebop_navigation)/config/costmap_common.yaml" command="load" ns="local_costmap" />
+    
+    <!-- TODO Question  what does ns represent , what's the use of ns parameter?
+    declares to which non-default namespace the load command should upload the YAML configured parameters to
+    -->
+    
+    <!-- local costmap, needs size 910x10 =~ RViz env size -->
+    <rosparam file="$(find bebop_navigation)/config/costmap_local.yaml" command="load" ns="local_costmap" />
+    <param name="local_costmap/width" value="10.0"/>
+    <param name="local_costmap/height" value="10.0"/>
+
+    
+    <!-- global costmap with laser, for odom_navigation_demo -->
+    <rosparam file="$(find bebop_navigation)/config/costmap_global_laser.yaml" command="load" ns="global_costmap" />
+    <param name="global_costmap/width" value="100.0" />
+    <param name="global_costmap/height" value="100.0" />
+  </node>
+
+</launch>

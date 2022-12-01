@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/mbz/Documents/PCQD_LIVE/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/amcl/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/ar_track_alvar/ar_track_alvar/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/base_local_planner/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/bebop_nav_real_1/bebop_autonomy/bebop_driver/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/bebop_nav_real_1/bebop_vel_ctrl/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/carrot_planner/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/clear_costmap_recovery/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/costmap_2d/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/dwa_local_planner/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/global_planner/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/lab_10/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/map_server/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/move_base/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/move_slow_and_clear/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/nav_core/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/navfn/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/rotate_recovery/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/navigation/voxel_grid/include/**",
+        "/home/mbz/Documents/PCQD_LIVE/src/bebop_nav_real_1/vrpn_client_ros-kinetic-devel/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

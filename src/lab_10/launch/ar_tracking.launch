@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <!-- <include file="$(find ar_tracking)/launch/usb_cam.launch" /> 
+    http://wiki.ros.org/ar_track_alvar
+    
+    The first use case for this package is to identify and track the poses of (possibly) 
+    multiple AR tags that are each considered individually. 
+    The node individualMarkers takes the following command line arguments:
+
+    marker_size (double) 
+    The width in centimeters of one side of the black square marker border
+
+    max_new_marker_error (double) 
+    A threshold determining when new 
+    markers can be detected under uncertainty
+
+    max_track_error (double) 
+    A threshold determining how much tracking error can be 
+    observed before an tag is considered to have disappeared
+
+    camera_image (string) 
+    The name of the topic that provides camera 
+    frames for detecting the AR tags. This can be mono or color, but should be an 
+    UNrectified image, since rectification takes place in this package
+
+    camera_info (string) 
+    The name of the topic that provides the camera calibration 
+    parameters so that the image can be rectified
+
+    output_frame (string) 
+    The name of the frame that the published 
+    Cartesian locations of the AR tags will be relative to-->
+
+    <include file="$(find ar_track_alvar)/launch/pr2_indiv_no_kinect.launch" >
+        <arg name="cam_image_topic" value="/bebop/image_raw" />       
+        <arg name="cam_info_topic" value="/bebop/camera_info" />
+        <arg name="output_frame" value="world" /> <!-- #og:  camera_optical // odom -->
+        <arg name="marker_size" default="5.0" />
+        <arg name="max_new_marker_error" default="0.08" />
+		<arg name="max_track_error" default="0.2" />
+    </include>
+</launch>

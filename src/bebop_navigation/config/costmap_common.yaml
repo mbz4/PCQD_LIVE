@@ -1,0 +1,50 @@
+#footprint: [[-0.5, -0.33], [-0.5, 0.33], [0.5, 0.33], [0.5, -0.33]]
+
+#important
+#TODO define footprint_model parameter of type circle and radius 40cm (Three lines)
+#TODO check the instruction pdf for more info
+
+footprint_model: "circular"
+type: "circle"
+radius: 0.3 # 40[cm] --> [m]
+
+robot_base_frame: base_footprint
+update_frequency: 4.0
+publish_frequency: 3.0
+transform_tolerance: 0.5
+
+resolution: 0.05
+
+obstacle_range: 5.5
+raytrace_range: 6.0
+
+#layer definitions
+
+#following lines specify which topic to use to get obstacle positions
+#TODO in topic field specify the topic in which you are getting the laserscan data
+obstacles_laser:
+    observation_sources: laser
+    laser: {data_type: LaserScan, clearing: true, marking: true, topic: pointcloud_scan, inf_is_valid: true}
+
+#important
+#TODO define inflation  parameter of  radius 25cm  and cost_scaling_factor of 4.0
+inflation_radius: 0.25 # [m]
+cost_scaling_factor: 4.0
+#TODO check the instruction pdf for more info
+#TODO Question what is the inflation parameter, what is the use for it,
+# TODO explain breifly the use of inflation radius and cost scaling factor ?
+
+# inflation --> The radius in meters to which the map inflates obstacle cost values.
+# A scaling factor to apply to cost values during inflation. 
+# The cost function is computed for all cells in the costmap further than the inscribed radius distance and 
+# closer than the inflation radius distance away from an actual obstacle
+
+# summarised: the inflation parameter declares how big the obstacle detection radius should be
+# after the drone passes this radius, the obstacles cost will be added to the total cost function
+# the cost scaling factor is used in the associated cost function too: 
+# i think it basically declares the rate at which obstacle cost grows with respect to the distance to the obstacle
+# exp^(-1 * cost_scaling_factor * (distance_from_obstacle - inscribed_radius)) * (costmap_2d::INSCRIBED_INFLATED_OBSTACLE - 1)
+# if i try to rewrite the above expression in terms of constants:
+# e^(-cost_scaling_factor_const *(distance to obstacle - const) * const...
+# i can confirm it acts as a weight or bias to how much the obstacle cost contributes to total cost as distance to the obstacle changes
+# src: https://wiki.ros.org/costmap_2d/hydro/inflation

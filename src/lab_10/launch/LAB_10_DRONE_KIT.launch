@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- to get position from gazebo -->
+  <include file="$(find lab_10)/launch/launch_real_world.launch"/>
+  <node name="bebop_commander" pkg="lab_10" type="bebop_commander.py" output="screen"/>
+  <include file="$(find lab_10)/launch/ar_tracking.launch" />
+  <node name="get_marker_poses" pkg="lab_10" type="get_marker_poses.py" output="screen"/>
+</launch>
